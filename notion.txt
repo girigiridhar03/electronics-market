@@ -1,0 +1,98 @@
+//
+users
+    can watch 
+    can add prod cart
+    can delete prod from cart
+
+
+admin
+    can create product
+    can delete product
+    can update product
+
+
+
+
+home = http://localhost/5000/home,
+
+register = http://localhost/5000/user/register
+
+login = http://localhost/5000/user/login
+
+
+
+home 
+get    = http://localhost/5000/home
+create = http://localhost/5000/home/createprod
+single = http://localhost/5000/home/singlehome
+update = http://localhost/5000/home/:id
+delete = http://localhost/5000/home/:id
+
+        REQUIRES:{
+            title:{type:String,required:true},
+            desc:{type:String},
+            price:{type:Number,required:true},
+            image:{type:String,required:true},
+        }
+
+Ac 
+get    = http://localhost/5000/ac
+create = http://localhost/5000/ac/createprod
+single = http://localhost/5000/ac/singleac
+update = http://localhost/5000/ac/:id
+delete = http://localhost/5000/ac/:id   
+
+     REQUIRES:{
+            title:{type:String,required:true},
+            desc:{type:String},
+            price:{type:Number,required:true},
+            image:{type:String,required:true},
+        }
+
+
+mobile 
+get    = http://localhost/5000/mobile
+create = http://localhost/5000/mobile/createprod
+single = http://localhost/5000/mobile/singlemobile
+update = http://localhost/5000/mobile/:id
+delete = http://localhost/5000/mobile/:id
+
+        REQUIRES:{
+            title:{type:String,required:true},
+            desc:{type:String},
+            price:{type:Number,required:true},
+            image:{type:String,required:true},
+        }
+
+
+laptop 
+get    = http://localhost/5000/laptop
+create = http://localhost/5000/laptop/createprod
+single = http://localhost/5000/laptop/singlelaptop
+update = http://localhost/5000/laptop/:id
+delete = http://localhost/5000/laptop/:id
+
+    REQUIRES:{
+            title:{type:String,required:true},
+            desc:{type:String},
+            price:{type:Number,required:true},
+            image:{type:String,required:true},
+        }
+
+
+camera 
+get    = http://localhost/5000/camera
+create = http://localhost/5000/camera/createprod
+single = http://localhost/5000/camera/singlecamera
+update = http://localhost/5000/camera/:id
+delete = http://localhost/5000/camera/:id
+
+
+    REQUIRES:{
+            title:{type:String,required:true},
+            desc:{type:String},
+            price:{type:Number,required:true},
+            image:{type:String,required:true},
+        }
+
+
