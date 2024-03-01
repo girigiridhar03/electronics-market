@@ -12,13 +12,18 @@ a{
 body{
     overflow-x: hidden;
 }
+
 /* nav styles */
 nav{
     width: 100vw;
     background-color: black;
     padding: 1.5rem .5rem;
 }
-
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .container{
     width: 95%;
     max-width: 1400px;
@@ -131,6 +136,7 @@ nav{
 .cart i{
     color: white;
     font-size: 2.3rem;
+    cursor: pointer;
 }
 
 .cart p{
@@ -151,7 +157,10 @@ nav{
     color: white;
     font-size: 2.3rem;
     display: none;
-    z-index: 999;
+    cursor: pointer;
+}
+#xmark{
+    cursor: pointer;
 }
 
 /* nav end */
@@ -161,8 +170,38 @@ nav{
     color: #C9C9C9;
     width: 100%;
     box-shadow: 2px 2px 2px;
-    padding: .5rem ;
+    padding: .5rem;
    
+}
+.my-acc-container{
+    background: #000;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    display: none;
+}
+.my-acc-container h4{
+    font-size: .9rem;
+    margin-bottom: .3rem;
+}
+.my-acc-container div button{
+    padding: .2rem;
+    border-radius: 5px;
+    color: #ED1C24;
+    cursor: pointer;
+}
+.my-acc-container i{
+   font-size: 1.5rem;
+   color: white;
+}
+.navbar-h2{
+    color: #7D788E;
+    font-weight: 300;
+    display: none;
+    margin-bottom: 1rem;
 }
 .headings{
    color: #333;
@@ -180,6 +219,19 @@ nav{
     font-weight: 600;
     position: relative;
 }
+#plus{
+    color: #000;
+    display: none;
+}
+.line{
+    transition: all .2s ease-in-out;
+}
+.line:hover{
+    border-bottom: 2px solid #ED1C24;
+    border-radius: 2px;
+}
+
+/* MOBLIES */
 .nav-two .mobiles{
     width: 95%;
     max-width: 1400px;
@@ -195,25 +247,131 @@ nav{
     z-index: 999;
     opacity: 0;
     visibility: hidden;
-    transition: .5s;
+    transition: all .5s;
 }
+
 .nav-two li:hover .mobiles{
     opacity: 1;
     visibility: visible;
 }
-.mobiles .moblie-links li{
+.mobiles .links li{
     margin-bottom: .5rem;
 }
-.mobiles .moblie-links li a{
+.mobiles .links li a{
     color: #777;
     font-weight: 500;
     transition: .3s;
 }
-.mobiles .moblie-links li a:hover{
+.mobiles .links li a:hover{
    color: #ED1C24;
    font-weight: bold;
 }
 
+/* LAPTOPS */
+.nav-two .laptops{
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: -260px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 1rem 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+.nav-two li:hover .laptops{
+    opacity: 1;
+    visibility: visible;
+}
+.laptops .links li{
+    margin-bottom: .5rem;
+}
+.laptops .links li a{
+    color: #777;
+    font-weight: 500;
+    transition: .3s;
+}
+.laptops .links li a:hover{
+   color: #ED1C24;
+   font-weight: bold;
+}
+/* CAMERA */
+.nav-two .cameras{
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: -260px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 1rem 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.nav-two li:hover .cameras{
+    opacity: 1;
+    visibility: visible;
+}
+.cameras .links li{
+    margin-bottom: .5rem;
+}
+.cameras .links li a{
+    color: #777;
+    font-weight: 500;
+    transition: .3s;
+}
+.cameras .links li a:hover{
+   color: #ED1C24;
+   font-weight: bold;
+}
+/* AIR CONDITIONERS */
+.nav-two .air-conditioners{
+    width: 95%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: -207px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 1rem 2rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.nav-two li:hover .air-conditioners{
+    opacity: 1;
+    visibility: visible;
+}
+.air-conditioners .links li{
+    margin-bottom: .5rem;
+}
+.air-conditioners .links li a{
+    color: #777;
+    font-weight: 500;
+    transition: .3s;
+}
+.air-conditioners .links li a:hover{
+   color: #ED1C24;
+   font-weight: bold;
+}
+.active{
+    height: auto;
+}
 /* media query */
 
 @media screen and (max-width:1024px) {
@@ -224,7 +382,8 @@ nav{
     width: 40%;
    }
    .sign-in{
-    padding: .9rem ;
+    padding: .8rem ;
+    font-size: 1rem;
    }
    .sign-div:hover .sign-box{
     opacity: 0;
@@ -232,14 +391,161 @@ nav{
 }
 .cart i{
     color: white;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .cart p{
      top: -9px;
      right: -9px;    
 }
+#icon{
+    display: block;
+    font-size: 1.5rem;
 }
+/* nav-two */
+ .nav-two{
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: none;
+    display: none;
+ }
+ #plus{
+    display: block;
+    transition: .5s;
+ }
+ .my-acc-container{
+    display: flex;
+ }
+.navbar{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0 ;
+    display: block;
+}
+.navbar-h2{
+    display: block;
+    padding: 0 1rem;
+}
+.navbar li{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: .4rem;
+    margin-bottom: 1rem;
+}
+
+.flex{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1rem 1rem;
+}
+.drop{
+    transition: all .2s;
+}
+.nav-two .mobiles{
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.nav-two .laptops{
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.nav-two .cameras{
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.nav-two .air-conditioners{
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.nav-two .mobiles.drop-active{
+    position: relative;
+    top: 0;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 100px;
+    overflow: hidden;
+    padding: 1rem;
+ }
+
+.nav-two .laptops.drop-active{
+    position: relative;
+    top: 0;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+ }
+.nav-two .cameras.drop-active{
+    position: relative;
+    top: 0;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+ }
+.nav-two .air-conditioners.drop-active{
+    position: relative;
+    top: 0;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    height: 950px;
+    overflow: hidden;
+    padding: 1rem;
+ }
+.line:hover{
+    border-bottom: none;
+}
+
+
+}
+
+
 @media screen and (max-width:768px) {
    .container h1{
     font-size: 1.5rem;
