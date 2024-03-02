@@ -5,6 +5,7 @@ const cameraSchema = new mongoose.Schema({
     desc:{type:String},
     price:{type:Number,required:true},
     image:{type:String,required:true},
+    brand:{type:String,required:true,}
 
 },{
     timestamps:true,

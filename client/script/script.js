@@ -172,5 +172,3 @@ export const navbarTwo = ()=>{
   </div>`
 }
 
-
-
