@@ -14,6 +14,7 @@ body{
     width: 100%;
     display: flex;
     overflow: hidden;
+    margin-top: 1.5rem;
 }
 
 .image-silder div{
@@ -30,7 +31,7 @@ body{
 .image-wrap{
     display: flex;
     position: relative;
-    height: 600px;
+    height: 550px;
     margin-top: 5.7rem;
 }
 
@@ -120,12 +121,57 @@ body{
 }
 #left{
     top: 50%;
-    display: none; 
+    display: block; 
 }
 #right{
     right: 0;
     top: 50%;
+    display: block;
+}
+#right-two{
+    right: 0;
+    top: 50%;
+    display: block;
+}
+#left-two{
+    top: 50%;
+    display: block;
+}
+#right-three{
+    right: 0;
+    top: 50%;
+    display: block;
+}
+#left-three{
+    top: 50%;
+    display: block;
+}
+#right-four{
+    right: 0;
+    top: 50%;
     display: none;
+}
+#left-four{
+    top: 50%;
+    display: none;
+}
+#right-five{
+    right: 0;
+    top: 50%;
+    display: block;
+}
+#left-five{
+    top: 50%;
+    display: block;
+}
+#right-six{
+    right: 0;
+    top: 50%;
+    display: block;
+}
+#left-six{
+    top: 50%;
+    display: block;
 }
 .products-one{
     width: 100%;
@@ -155,6 +201,7 @@ body{
 }
 .product img{
     height: 210px;
+    margin: auto;
 }
 .product .desc h5{
     font-weight: bolder;
@@ -172,8 +219,134 @@ body{
     text-align: left;
     padding-left: 1.5rem;
 }
+.footer-section{
+    width: 100%;
+    background: #000;
+    padding: 1rem;
+}
+.footer-container{
+    width: 97%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-container ul{
+    list-style: none;
+}
+.footer-container ul  li{
+    color: white;
+    font-weight: 200;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.footer-container ul li:hover{
+    font-weight: 550;
+}
+.footer-container div p{
+    color: white;
+    font-weight: 200;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.footer-container div p:hover{
+    font-weight: 550;
+}
+.footer-container ul h5{
+    color: rgb(173, 170, 170);
+    font-size: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.footer-container ul  h5::after{
+     content: '';
+     position: absolute;
+     height: 0.1rem;
+     width: 4.2rem;
+     left: 0;
+     bottom: -.5rem;
+     background: #EE1C27;
+}
+.footer-container div h5{
+    color: rgb(173, 170, 170);
+    font-size: 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.footer-container div  h5::after{
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    width: 4.2rem;
+    left: 0;
+    bottom: -.5rem;
+    background: #EE1C27;
+}
+
+.footer-container div .details{
+   border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: #343232;
+    margin-top: 1rem;
+}
+.footer-container div input{
+   width: 95%;
+   height: 100%;
+   padding: 0 1rem;
+   background: transparent;
+   border: none;
+   outline: none;
+   color: white;
+   font-weight: 400;
+}
+.footer-container div button{
+     height: 100%;
+     outline: none;
+     border: none;
+     cursor: pointer;
+     border-radius: 0 5px 5px 0;
+}
+.footer-container div button img{
+    height: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.content{
+    margin-top: 2rem;
+}
+.content .icons{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+.content .icons img{
+    width: 50px;
+}
+
+.footer-section h1{
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.footer-section h1 span{
+    color: red;
+}
 
 @media screen and (max-width:1024px) {
+    .image-silder{
+        margin-top: 0;
+    }
     .image-wrap{
         height: 300px;
     }
@@ -181,10 +354,42 @@ body{
         margin-top: 6rem;
     }
     
-    #left, #right{
+    #left, #right,
+    #left-two,#right-two,
+    #left-three,#right-three,
+    #left-four,#right-four,
+    #left-five,#right-five,
+    #left-si,#right-six{
         display: block;
     }
-    
+    .product img{
+        height: 180px;
+        width: 180px;
+    }
+    .content .icons img{
+        width: 30px;
+    }
+    .footer-container{
+        width: 97%;
+    }
+    .footer-container div .details{
+         width: 70%;
+         height: 35px;
+     }
+     .footer-container ul  li{
+        font-size: .7rem;
+        font-weight: 300;
+    }
+     .footer-container div p{
+        font-size: .7rem;
+        font-weight: 300;
+    }
+    .footer-container ul h5{
+        font-size: .9rem;
+    }
+    .footer-section h1{
+        font-size: 2.1rem;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -192,9 +397,24 @@ body{
         height: 250px;
     }
     .image-wrap i{
-       display: none;
+       display: block;
+       font-size: .8rem;
+       padding: .5rem;
         
     }
+    .image-wrap #left-btn{
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        transform: translateY(-50%);
+    }
+    .image-wrap #right-btn{
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+    }
+   
     .product:hover{
         box-shadow: none;
     }
@@ -236,12 +456,58 @@ body{
    }
    .title .lines-down div{
        border: 1px solid #333;
-       width: 7rem;
+       width: 6rem;
        margin-top: .5rem;
+       
        display: block;
    }
-   #left, #right{
+   .title h4{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+   #left, #right,
+   #left-two,#right-two,
+   #left-three,#right-three,
+   #left-four,#right-four,
+   #left-six,#right-six{
     display: none;
+}
+#left-five,#right-five{
+    display: none;
+}
+.product img{
+    height: 120px;
+    width: 120px;
+}
+.content .icons img{
+    width: 30px;
+}
+.footer-container div .details{
+     width: 70%;
+     height: 35px;
+ }
+ .footer-container ul  li{
+    font-size: .5rem;
+    font-weight: 300;
+}
+.footer-container ul li:hover{
+    font-weight: 300;
+}
+.footer-container div p{
+    font-size: .5rem;
+    font-weight: 300;
+}
+.footer-container div p:hover{
+    font-weight: 300;
+}
+.footer-container ul h5{
+    font-size: .7rem;
+}
+.footer-container div h5{
+    font-size: .7rem;
+}
+.footer-section h1{
+    font-size: 1.9rem;
 }
 }
 @media screen and (max-width:600px) {
@@ -251,7 +517,6 @@ body{
     .image-wrap{
         margin-top: 4rem;
     }
-  
     .viewBtn{
         top: 4rem;
     }
@@ -277,13 +542,70 @@ body{
     box-shadow: none;
 }
 .product img{
-    height: 150px;
+    height: 120px;
+    width: 120px;
 }
 .products-one{
     height: 300px;
 }
 .product .desc p{
     text-align: center;
+}
+.viewBtn{
+    top: 3.9rem;
+}
+.content .icons img{
+    width: 22px;
+}
+.footer-container div .details{
+    width: 70%;
+    height: 30px;
+}
+.footer-container div .details input{
+   font-size: .7rem;
+   padding: 0.5rem;
+}
+ .footer-container ul  li{
+    font-size: .3rem;
+    font-weight: 300;
+}
+.footer-container ul li:hover{
+    font-weight: 300;
+}
+.footer-container div p{
+    font-size: .4rem;
+    font-weight: 300;
+}
+.footer-container div p:hover{
+    font-weight: 300;
+}
+.footer-container ul h5{
+    font-size: .5rem;
+}
+.footer-container div h5{
+    font-size: .5rem;
+}
+.footer-section h1{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.footer-container div  h5::after{
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    width: 2rem;
+    left: 0;
+    bottom: -.5rem;
+    background: #EE1C27;
+}
+.footer-container ul  h5::after{
+    content: '';
+    position: absolute;
+    height: 0.1rem;
+    width: 2rem;
+    left: 0;
+    bottom: -.5rem;
+    background: #EE1C27;
 }
 }
 @media screen and (max-width:430px) {
@@ -293,12 +615,30 @@ body{
     .image-wrap{
         margin-top: 3.6rem;
     }
+    .image-wrap i{
+        display: block;
+        font-size: .5rem;
+        padding: .2rem;
+         
+     }
+     .image-wrap #left-btn{
+         position: absolute;
+         top: 50%;
+         left: 1rem;
+         transform: translateY(-50%);
+     }
+     .image-wrap #right-btn{
+         position: absolute;
+         top: 50%;
+         right: 1rem;
+         transform: translateY(-50%);
+     }
     .sec{
         margin-top: 1.5rem; 
         padding-bottom: 0.1rem; 
     }
     .viewBtn{
-        top: 4.9rem;
+        top: 4.5rem;
         padding: .5rem;
         font-size: .7rem;
     }
@@ -307,7 +647,7 @@ body{
     }
     .product img{
         height: 100px; 
-        width: 100%;
+        width: 100px;
         margin: auto;
     }
     .products-one{
@@ -321,5 +661,123 @@ body{
         padding: 0.7rem;
         margin-top: 0rem;
 
+    }
+    .content .icons img{
+        width: 20px;
+    }
+    .footer-container div .details{
+         width: 70%;
+         height: 20px;
+     }
+     .footer-container div .details input{
+        font-size: .6rem;
+        padding: 0 .5rem;
+     }
+     .footer-container ul  li{
+        font-size: .3rem;
+        font-weight: 300;
+    }
+    .footer-container ul li:hover{
+        font-weight: 300;
+    }
+    .footer-container div p{
+        font-size: .4rem;
+        font-weight: 300;
+    }
+    .footer-container div p:hover{
+        font-weight: 300;
+    }
+    .footer-container ul h5{
+        font-size: .5rem;
+    }
+    .footer-container div h5{
+        font-size: .5rem;
+    }
+    .footer-section h1{
+        font-size: 1.2rem;
+    }
+    .footer-container div  h5::after{
+        content: '';
+        position: absolute;
+        height: 0.1rem;
+        width: 2rem;
+        left: 0;
+        bottom: -.5rem;
+        background: #EE1C27;
+    }
+    .footer-container ul  h5::after{
+        content: '';
+        position: absolute;
+        height: 0.1rem;
+        width: 2rem;
+        left: 0;
+        bottom: -.5rem;
+        background: #EE1C27;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .title h4{
+        font-size: 1.2rem;
+    }
+    .title .lines-down div{
+        width: 5rem;
+      
+    }
+    .image-silder{
+        margin-top: 0rem;
+       
+    }
+    .content .icons img{
+        width: 15px;
+    }
+    .footer-container div .details{
+         width: 70%;
+         height: 20px;
+     }
+     .footer-container div .details input{
+        font-size: .6rem;
+        padding: 0 .5rem;
+     }
+     .footer-container ul  li{
+        font-size: .2rem;
+        font-weight: 300;
+    }
+    .footer-container ul li:hover{
+        font-weight: 300;
+    }
+    .footer-container div p{
+        font-size: .3rem;
+        font-weight: 300;
+    }
+    .footer-container div p:hover{
+        font-weight: 300;
+    }
+    .footer-container ul h5{
+        font-size: .5rem;
+    }
+    .footer-container div h5{
+        font-size: .5rem;
+    }
+    .footer-section h1{
+        font-size: 1.2rem;
+    }
+    .footer-container div  h5::after{
+        content: '';
+        position: absolute;
+        height: 0.1rem;
+        width: 1.5rem;
+        left: 0;
+        bottom: -.5rem;
+        background: #EE1C27;
+    }
+    .footer-container ul  h5::after{
+        content: '';
+        position: absolute;
+        height: 0.1rem;
+        width: 1.5rem;
+        left: 0;
+        bottom: -.5rem;
+        background: #EE1C27;
     }
 }

@@ -3,7 +3,7 @@ const { homeModel } = require("../models/home.model");
 const homeController = {
   getHome: async (req, res) => {
     const page = parseInt(req.query.page) || 1; // Use req.query to get query parameters
-    const size = parseInt(req.query.size) || 20; // Use req.query to get query parameters
+    const size = parseInt(req.query.size) || 55; // Use req.query to get query parameters
     const sortDirection = req.query.sort === 'desc' ? -1 : 1; // Check if sort direction is descending
     const titleQuery = req.query.title; // Get the title query parameter
     const query = titleQuery ? { title: { $regex: new RegExp(titleQuery, 'i') } } : {}; // Define the query object

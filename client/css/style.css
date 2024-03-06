@@ -9,6 +9,7 @@
 a{
     text-decoration: none;
 }
+
 body{
     overflow-x: hidden;
 }
@@ -97,7 +98,7 @@ nav{
     position: absolute;
     bottom: -70px;
     left: -2px;
-    z-index: 999;
+    z-index: 9999;
     opacity: 0;
     visibility: hidden;
     transition: .5s;
@@ -175,10 +176,11 @@ nav{
     box-shadow: 2px 2px 2px;
     padding: .6rem;
     position: fixed;
-    z-index: 9;
-    top: 5.2rem;
+    top: 5.1rem;
     background-color: white;
     box-shadow: 0px 0px 2px;
+    margin-top: .8rem;
+    z-index: 1;
 }
 .my-acc-container{
     background: #000;
@@ -417,7 +419,7 @@ nav{
     position: absolute;
     background-color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
@@ -425,6 +427,12 @@ nav{
     box-shadow: none;
     display: none;
     z-index: 999;
+    margin-top: 0;
+   
+ }
+
+ .links{
+    width: 100%;
  }
  #plus{
     display: block;
@@ -432,6 +440,7 @@ nav{
  }
  .my-acc-container{
     display: flex;
+   
  }
 .navbar{
     margin-top: 2rem;
@@ -575,7 +584,9 @@ nav{
     nav{
         padding: 1rem .5rem;
     }
-   
+    .nav-two{
+        margin-top: 0;
+    }
     .container{
         width: 95%;
     }
@@ -631,6 +642,7 @@ nav{
         top: -9px;
         right: -9px;    
    }
+    
 }
 
 @media screen and (max-width:375px){
@@ -667,4 +679,98 @@ nav{
         top: -9px;
         right: -9px;  
        } 
+}
+
+@media screen and (max-width: 320px) {
+    nav{
+        padding:1rem;
+    }
+    #icon{
+        font-size: .7rem;
+    }
+    .container h1{
+        font-size: .7rem;
+       }
+       .search-bar{
+        width: 28%;
+       }
+       .search-bar input{
+        font-size: .3rem;
+       }
+       .search-bar i{
+        font-size: .5rem;
+       }
+       .sign-in{
+        padding: .2rem ;
+        font-size: .7rem;
+       }
+       .cart i{
+        font-size: 1rem;
+       }
+       .cart p{
+        height: 12px;
+        width: 12px;
+        top: -5px;
+        right: -6px;  
+        font-size: .5rem;
+       } 
+       .nav-two{
+        padding: 0;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: none;
+        display: none;
+        z-index: 999;
+        margin-top: 0;
+     }
+     .my-acc-container{
+        padding: 1rem;
+        display: none;
+        z-index: 999;
+    }
+     #plus{
+        display: block;
+        transition: .5s;
+        font-size: 1rem;
+     }
+     #xmark{
+        font-size: 1rem;
+     }
+     .welcome-sign button{
+        font-size: .7rem;
+        padding: .5rem;
+     }
+     .my-acc-container{
+        display: flex;
+       
+     }
+    .navbar{
+        margin-top: 2rem;
+        width: 100%;
+        padding: 0 ;
+        display: block;
+    }
+    .navbar-h2{
+        display: block;
+        padding: 0 1rem;
+    }
+    .navbar li{
+        width: 100%;
+        font-size: 1rem;
+        padding: .4rem;
+        margin-bottom: 1rem;
+    }
+    .links li{
+        font-size: .8rem;
+    }
+    .links h5{
+        margin-top: 1rem;
+        
+    }
 }
