@@ -1,5 +1,7 @@
 
-
+body{
+    background: #fff;
+}
 .products-container{
     width: 95%;
     max-width: 1400px;
@@ -35,6 +37,40 @@
 }
 .left-scroll-images img:hover{
     border: 2px solid red;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.buttons{
+    position: absolute;
+    bottom: -8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons button:nth-child(1){
+    width: 48%;
+    height: 50px;
+    border: 2px solid #ED1C24;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ED1C24;
+    cursor: pointer;
+    outline: none;
+}
+.buttons button:nth-child(2){
+    width: 48%;
+    height: 50px;
+    background: #ED1C24;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
 }
 .right-big-image img{
@@ -108,8 +144,10 @@
 #arrow-left,#arrow-right{
     display: none;
 }
-
-
+.footer-section{
+   position: absolute;
+   bottom: -40rem;
+}
 
 @media screen and (max-width:1024px) {
     .products-container{
@@ -155,6 +193,15 @@
         justify-content: center;
         box-shadow: 1px 1px 8px 1px;
     }
+    .buttons{
+        position: absolute;
+        bottom: -30rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     .right-sepc-container{
         width: 95%;
         margin-top: 1rem;
@@ -175,6 +222,18 @@
     border: none;
     cursor: pointer;
 }
+
+}
+@media screen and (max-width:768px) {
+    .buttons{
+        bottom: -35rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .buttons{
+        bottom: -34rem;
+    }
+
 }
 
 @media screen and (max-width:430px) {
@@ -193,6 +252,15 @@
     .right-sepc-container h2{
         width: 100%;
         font-size: 1rem;
+    }
+    .buttons{
+        bottom: -25rem;
+    }
+    .buttons button:nth-child(1){
+        height: 40px;
+    }
+    .buttons button:nth-child(2){
+        height: 40px;
     }
 }
 @media screen and (max-width:375px) {
@@ -222,6 +290,17 @@
        height: 1.5rem;
        font-size: 1rem;
    }
+   .buttons{
+    bottom: -26rem;
+}
+.buttons button:nth-child(1){
+    height: 30px;
+    font-size: .8rem;
+}
+.buttons button:nth-child(2){
+    height: 30px;
+    font-size: .8rem;
+}
 }
 @media screen and (max-width:320px) {
     
@@ -250,4 +329,15 @@
        height: 1.5rem;
        font-size: 1rem;
    }
+   .buttons{
+    bottom: -33rem;
+}
+.buttons button:nth-child(1){
+    height: 30px;
+    font-size: .8rem;
+}
+.buttons button:nth-child(2){
+    height: 30px;
+    font-size: .8rem;
+}
 }

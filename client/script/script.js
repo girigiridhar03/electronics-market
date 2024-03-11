@@ -2,8 +2,8 @@
 
  export const navbar = ()=>{
      return `<div class="container">
-     <i class="fa-solid fa-bars" id="icon"></i>
-    <a href="#"> <h1>Electronics <span>Market</span></h1></a>
+     <i class="fa-solid fa-bars" id="menu"></i>
+    <a href="../html/index.html"> <h1>Electronics <span>Market</span></h1></a>
       <!-- search bar -->
       <div class="search-bar">
           <input type="text" placeholder="Search for products">
@@ -26,8 +26,7 @@
   </div>`
  }
 export const navbarTwo = ()=>{
-     return ` <div class="nav-two">
-     <!-- responsive -->
+     return `
      <div class="my-acc-container">
          <div class="welcome-sign">
              <h4>welcome!</h4>
@@ -38,7 +37,7 @@ export const navbarTwo = ()=>{
          </div>
          <i class="fa-solid fa-xmark" id="xmark"></i>
      </div>
-     <!-- End -->
+
      <ul class="container navbar">
          <h2 class="navbar-h2">CATEGORIES</h2>
       <li>
@@ -47,7 +46,7 @@ export const navbarTwo = ()=>{
      <!-- MOBILES & TABLETS -->
       <li class="drop">
          <div class="flex">
-             <a href="#" class="line">MOBILES & TABLETS</a>
+             <a href="../html/mobiles.html" class="line">MOBILES & TABLETS</a>
              <i class="fa-solid fa-plus" id="plus"></i>
          </div>
          <div class="mobiles">
@@ -168,7 +167,70 @@ export const navbarTwo = ()=>{
               </ul>
          </div>
      </li>
-     </ul>
-  </div>`
+     </ul>`
 }
 
+
+export const footer = ()=>{
+     return `
+     <div class="footer-container">
+        <ul class="usefull-links">
+            <h5>Useful Links</h5>
+             <li>HOME</li>
+             <li>ABOUT US</li>
+             <li>STORE LOCATOR</li>
+             <li>CAREERS</li>
+             <li>CONTACT US</li>
+             <li>BRAND STRORES</li>
+             <li>E-WASTE</li>
+             <li>BLOG</li>
+             <li>LOYALITY</li>
+             <li>GIFT VOUCHERS</li>
+             <li>BECOME AN AFFILIATE</li>
+        </ul>
+        <ul class="categories">
+            <h5>Categories</h5>
+             <li>AIR CONDITIONERS</li>
+             <li>MOBILE & TABLETS</li>
+             <li>LAPTOPS</li>
+             <li>CAMERA</li>
+             <li>ACCESSORIES</li>
+        </ul>
+        <ul class="acc">
+            <h5>My Account</h5>
+             <li>MY ACCOUNT</li>
+             <li>MY ORDERS</li>
+        </ul>
+        <ul class="help-desk">
+           <h5>Help Desk</h5>
+            <li>TERMS OF USE</li>
+            <li>PRIVACY POLICY</li>
+            <li>PAYMENT & RETURNS</li>
+            <li>SHIPPING OPTION</li>
+            <li>HELP/FAQ</li>
+            <li>LOYALITY PROGRAMME</li>
+       </ul>
+        <div>
+           <h5>Newsletter</h5>
+           <p>Stay in touch with us,get product updates offers discounts <br> directly on your inbox</p>
+            <div class="details">
+                <input type="email" placeholder="Please provide your Email address here">
+                <button><img src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/send-button.png" alt=""></button>
+            </div>
+            
+            <div class="content">
+                <h5>Follow Us On</h5>
+                <div class="icons">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/1.Fb.png" alt="">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/2.Insta.png" alt="">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/3.Youtube.png" alt="">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/NewTwitter.png" alt="">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/5.Linkedin.png" alt="">
+                   <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/socialIcon/6.whatsapp.png" alt="">
+                </div>
+            </div>
+        </div>
+     </div>
+       <a href="index.html"><h1>Electronics <span>Market</span></h1></a>
+  `
+}

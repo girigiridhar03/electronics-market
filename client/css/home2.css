@@ -237,25 +237,25 @@ body{
 }
 .footer-container ul  li{
     color: white;
-    font-weight: 200;
+    font-weight: 300;
     font-size: .9rem;
     margin-bottom: .5rem;
     cursor: pointer;
     transition: .2s;
 }
 .footer-container ul li:hover{
-    font-weight: 550;
+    font-weight: 500;
 }
 .footer-container div p{
     color: white;
-    font-weight: 200;
+    font-weight: 300;
     font-size: .9rem;
     margin-bottom: .5rem;
     cursor: pointer;
     transition: .2s;
 }
 .footer-container div p:hover{
-    font-weight: 550;
+    font-weight: 500;
 }
 .footer-container ul h5{
     color: rgb(173, 170, 170);

@@ -165,7 +165,7 @@ function sectionOne(products){
 function singleProduct(prod){
      let singleProd = prod._id;
        localStorage.setItem("mobile",JSON.stringify(singleProd));
-       window.location.href = "../html/mobile.html";
+       window.location.href = "../html/single-product.html";
    
 }
 
