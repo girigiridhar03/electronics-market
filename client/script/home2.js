@@ -3,7 +3,6 @@ const url = `http://localhost:5000/home`;
 const getData = async()=>{
     let res = await fetch(url);
     let data = await res.json();
-    console.log(data)
     let images = data.prod;
     image(images);
     let productImages = data.prod;

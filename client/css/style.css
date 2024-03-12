@@ -81,8 +81,57 @@ nav{
 }
 
 
+.search-product-container{
+    position: absolute;
+    width: 37%;
+    height: 500px;
+    background: white;
+    left: 40rem;
+    top: 5rem;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    overflow-y: scroll;
+    box-shadow: 0px 0px 5px 0px;
+    display: none;
+}
+.search-product-container h5{
+    font-size: 1rem;
+    border-bottom: 2px solid #3338;
+    padding-bottom: .5rem;
+  
+}
+.search-product-container::-webkit-scrollbar{
+    display: none;
+}
+.search-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
 
-
+.search-images div{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 1rem;
+    
+}
+.search-images div img{
+    width: 85px;
+    height: 85px;
+}
+.search-images div p{
+    font-size: .8rem;
+    height: 32px;
+    width: 100px;
+    overflow: hidden;
+}
+.search-price p{
+    font-size: .5rem;
+    color: #ED1C24;
+    font-weight: bold;
+}
 .sign-box a button{
     padding: .5rem 1rem;
     margin: auto;
@@ -423,6 +472,17 @@ nav{
     display: block;
     font-size: 1.5rem;
 }
+.search-product-container{
+    position: absolute;
+    width: 37%;
+    height: 500px;
+    background: white;
+    left: 24rem;
+    top: 5rem;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+}
+
 /* nav-two */
  .nav-two{
     padding: 0;

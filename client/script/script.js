@@ -1,13 +1,20 @@
 
 
  export const navbar = ()=>{
-     return `<div class="container">
+     return ` <div class="container">
      <i class="fa-solid fa-bars" id="menu"></i>
     <a href="../html/index.html"> <h1>Electronics <span>Market</span></h1></a>
       <!-- search bar -->
       <div class="search-bar">
-          <input type="text" placeholder="Search for products">
+          <input type="text" placeholder="Search for products" id="search-prod">
           <i class="fa-solid fa-magnifying-glass"></i>
+          <div class="search-product-container">
+             <h5>PRODUCTS</h5>
+             <div class="product-image-container">
+               
+
+             </div>
+          </div>
       </div>
       <!-- sign in -->
       <div class="sign-div">

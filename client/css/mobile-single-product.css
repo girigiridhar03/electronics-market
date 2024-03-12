@@ -1,0 +1,343 @@
+
+body{
+    background: #fff;
+}
+.products-container{
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.left-image-container{
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    height: 500px;
+    position: relative;
+    justify-content: space-around;
+    
+}
+.left-scroll-images{
+    overflow: scroll;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.left-scroll-images::-webkit-scrollbar{
+    display: none;
+}
+.left-scroll-images img{
+    width: 120px;
+   
+}
+.left-scroll-images img:hover{
+    border: 2px solid red;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.buttons{
+    position: absolute;
+    bottom: -8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.buttons button:nth-child(1){
+    width: 48%;
+    height: 50px;
+    border: 2px solid #ED1C24;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ED1C24;
+    cursor: pointer;
+    outline: none;
+}
+.buttons button:nth-child(2){
+    width: 48%;
+    height: 50px;
+    background: #ED1C24;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.right-big-image img{
+        width: 500px;
+        height: 490px;
+        box-shadow: 0px 0px 5px 0px;
+}
+
+
+.right-sepc-container{
+    width: 45%;
+}
+
+.left-image-container i{
+    position: absolute;
+    cursor: pointer;
+}
+
+#arrow-up{
+    top: 0;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    background: white;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px;
+    padding: .3rem;
+}
+
+#arrow-down{
+    bottom: -1.3rem;
+    left: 1.4rem;
+    font-size: 1.4rem;
+    background: white;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0px 0px 2px 0px;
+    padding: .3rem;
+}
+
+.right-sepc-container{
+    padding: 1rem;
+}
+.right-sepc-container h2{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.right-sepc-container p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ED1C24;
+    margin: 1rem 0;
+}
+
+.highlights{
+    border: 2px solid #888;
+    margin-top: 5rem;
+}
+
+.highlights h4{
+    border-bottom: 2px solid #888;
+   padding: 1rem;
+   font-weight: 1.2rem;
+   color: #333;
+}
+
+.highlights ul{
+    padding: .5rem 2rem;
+}
+#arrow-left,#arrow-right{
+    display: none;
+}
+.footer-section{
+   position: absolute;
+   bottom: -40rem;
+}
+
+@media screen and (max-width:1024px) {
+    .products-container{
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+    .left-image-container{
+        width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        height: 400px;
+    }
+    #arrow-up,#arrow-down{
+        display: none;
+    }
+    #arrow-right{
+         position: initial;
+         transform: rotate(-90deg);
+         border-radius: 50%;
+         width: 2rem;
+         height: 2rem;
+         font-size: 1rem;
+         padding: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         box-shadow: 1px 1px 8px 1px;
+    }
+    #arrow-left{
+        position: initial;
+        transform: rotate(-90deg);
+        position: initial;
+        transform: rotate(-90deg);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 8px 1px;
+    }
+    .buttons{
+        position: absolute;
+        bottom: -30rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .right-sepc-container{
+        width: 95%;
+        margin-top: 1rem;
+    }
+   .right-big-image{
+    display: none;
+   }  
+   .left-scroll-images{
+    flex-direction: row;
+    width: 300px;
+    height: 300px;
+   }
+   .left-scroll-images img{
+    width: 100%;
+    height: 100%;
+   }
+   .left-scroll-images img:hover{
+    border: none;
+    cursor: pointer;
+}
+
+}
+@media screen and (max-width:768px) {
+    .buttons{
+        bottom: -35rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .buttons{
+        bottom: -34rem;
+    }
+
+}
+
+@media screen and (max-width:430px) {
+    
+    .products-container{
+        margin-top: 5rem;
+         gap: 0;
+    }
+    .left-scroll-images{
+        width: 250px;
+        height: 250px;
+    }
+    .highlights{
+        margin-top: 1rem;
+    }
+    .right-sepc-container h2{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .buttons{
+        bottom: -25rem;
+    }
+    .buttons button:nth-child(1){
+        height: 40px;
+    }
+    .buttons button:nth-child(2){
+        height: 40px;
+    }
+}
+@media screen and (max-width:375px) {
+    
+    .products-container{
+        margin-top: 5rem;
+         gap: 0;
+    }
+    .left-scroll-images{
+        width: 250px;
+        height: 250px;
+    }
+    .highlights{
+        margin-top: 1rem;
+    }
+    .right-sepc-container h2{
+        width: 100%;
+        font-size: 1rem;
+    }
+    #arrow-right{
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem
+   }
+   #arrow-left{
+       width: 1.5rem;
+       height: 1.5rem;
+       font-size: 1rem;
+   }
+   .buttons{
+    bottom: -26rem;
+}
+.buttons button:nth-child(1){
+    height: 30px;
+    font-size: .8rem;
+}
+.buttons button:nth-child(2){
+    height: 30px;
+    font-size: .8rem;
+}
+}
+@media screen and (max-width:320px) {
+    
+    .products-container{
+        margin-top: 5rem;
+         gap: 0;
+    }
+    .left-scroll-images{
+        width: 250px;
+        height: 250px;
+    }
+    .highlights{
+        margin-top: 1rem;
+    }
+    .right-sepc-container h2{
+        width: 100%;
+        font-size: 1rem;
+    }
+    #arrow-right{
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem
+   }
+   #arrow-left{
+       width: 1.5rem;
+       height: 1.5rem;
+       font-size: 1rem;
+   }
+   .buttons{
+    bottom: -33rem;
+}
+.buttons button:nth-child(1){
+    height: 30px;
+    font-size: .8rem;
+}
+.buttons button:nth-child(2){
+    height: 30px;
+    font-size: .8rem;
+}
+}

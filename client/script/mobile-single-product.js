@@ -9,10 +9,9 @@ const footerSection = document.querySelector(".footer-section");
 footerSection.innerHTML = footer();
 
 
-const singleProd = JSON.parse(localStorage.getItem("mobile"));
-console.log(singleProd)
+const singleMobileProd = JSON.parse(localStorage.getItem("mobileSingle"))
 const getData = async(prod)=>{
-    let res = await fetch(`http://localhost:5000/home/${prod}`,{
+    let res = await fetch(`http://localhost:5000/mobile/${prod}`,{
         method:"GET",
     });
     let data = await res.json();
@@ -20,7 +19,7 @@ const getData = async(prod)=>{
    getProduct(data)
 
 } 
-getData(singleProd)
+getData(singleMobileProd)
 
 
 
