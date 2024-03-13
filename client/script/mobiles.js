@@ -127,6 +127,8 @@ function mobileProducts(mob){
                          card.classList.add('hide-content')
                     })
                }
+
+               
                if(phn.title === val){
                   console.log(phn)
                     const card = document.createElement("div");
