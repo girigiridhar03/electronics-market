@@ -36,22 +36,22 @@ accordiance.forEach(accordian=>{
 })
 
 
-const url = "http://localhost:5000/laptop"
+const url = "http://localhost:5000/ac"
 
 const getData = async()=>{
      let res = await fetch(url);
      let data = await res.json();
-     laptopsProd(data.prod)
-     laptopProducts(data.prod)
+     acProd(data.prod)
+     acProducts(data.prod)
 }
 
 
 
-function laptopsProd(prod){
+function acProd(prod){
      
      prod.map(item=>{
       
-        if(item.title === "Laptop"){
+        if(item.title === "Ac"){
           const card = document.createElement("div");
           card.classList.add("card")
         
@@ -84,40 +84,40 @@ function laptopsProd(prod){
 
 
  function singleProduct(single){
-     let singleLaptop = single._id;
-       localStorage.setItem("lapSingle",JSON.stringify(singleLaptop));
-       window.location.href = "../html/laptop-single-product.html";
+     let singleAc = single._id;
+       localStorage.setItem("acSingle",JSON.stringify(singleAc));
+       window.location.href = "../html/ac-single-product.html";
    
 }
 
-function laptopProducts(laptop){
+function acProducts(ac){
 
      check.forEach(checkBox=>{
          checkBox.addEventListener("click",(e)=>{
           if(checkBox.checked){
                const val = e.target.name;
-               laptop.filter(lap=>{
-               if(lap.brand === val){
+               ac.filter(air=>{
+                   if(air.brand === val){
                     const card = document.createElement("div");
               card.classList.add("card")
             
               const img = document.createElement("img");
-              img.src = lap.image[0];
+              img.src = air.image[0];
               const div = document.createElement("div");
               div.classList.add("img-price-details");
               const h6 = document.createElement("h6");
-              h6.innerHTML = lap.desc;
+              h6.innerHTML = air.desc;
               const p = document.createElement("p");
               p.innerHTML = "MRP : ";
               const span = document.createElement("span");
-              span.innerHTML = lap.price
+              span.innerHTML = air.price
               p.append(span);
               div.append(h6,p);
               card.append(img,div)
               mobileContainer.append(card);
 
               card.addEventListener("click",()=>{
-               singleProduct(lap)
+               singleProduct(air)
 
          })
           }
@@ -128,27 +128,27 @@ function laptopProducts(laptop){
                }
 
                
-               if(lap.title === val){
+               if(air.title === val){
                     const card = document.createElement("div");
               card.classList.add("card")
             
               const img = document.createElement("img");
-              img.src = lap.image[0];
+              img.src = air.image[0];
               const div = document.createElement("div");
               div.classList.add("img-price-details");
               const h6 = document.createElement("h6");
-              h6.innerHTML = lap.desc;
+              h6.innerHTML = air.desc;
               const p = document.createElement("p");
               p.innerHTML = "MRP : ";
               const span = document.createElement("span");
-              span.innerHTML = lap.price
+              span.innerHTML = air.price
               p.append(span);
               div.append(h6,p);
               card.append(img,div)
               mobileContainer.append(card);
 
               card.addEventListener("click",()=>{
-               singleProduct(lap)
+               singleProduct(air)
 
          })
                }
