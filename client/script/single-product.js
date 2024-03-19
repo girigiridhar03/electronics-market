@@ -9,19 +9,15 @@ const footerSection = document.querySelector(".footer-section");
 footerSection.innerHTML = footer();
 
 
-const singleProd = JSON.parse(localStorage.getItem("mobile"));
-console.log(singleProd)
+const singleMobileProd = JSON.parse(localStorage.getItem("single"))
 const getData = async(prod)=>{
     let res = await fetch(`http://localhost:5000/home/${prod}`,{
         method:"GET",
     });
     let data = await res.json();
-    console.log(data)
    getProduct(data)
-
 } 
-getData(singleProd)
-
+getData(singleMobileProd)
 
 
 const leftScrollImages = document.querySelector(".left-scroll-images");
@@ -30,10 +26,9 @@ const arrowUp = document.querySelector("#arrow-up");
 const arrowDown = document.querySelector("#arrow-down");
 const rightBigImage = document.querySelector(".right-big-image");
 const rightSepcContainer = document.querySelector(".right-sepc-container");
-
+const cart = document.querySelector("#cart");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
-
 
 
 
@@ -54,7 +49,7 @@ arrowDown.addEventListener("click",()=>{
 
 function getProduct(product){
     let prodImage = product.image;
-     prodImage.map(item=>{
+     prodImage.map((item)=>{
          const img = document.createElement("img");
          img.src = item;
          img.classList.add("scrollImage");
@@ -91,7 +86,8 @@ function getProduct(product){
      <li>Lorem ipsum dolor sit amet.</li>`;
 
      div.append(h4,ul);
-   rightSepcContainer.append(h2,p,div)
+   rightSepcContainer.append(h2,p,div);
+   cartDetails(product)
 
 }
 
@@ -107,3 +103,18 @@ arrowLeft.addEventListener("click",()=>{
     leftScrollImages.scrollLeft -= 320;
     console.log("left")
 })
+
+
+function cartDetails(cartProd){
+    cart.addEventListener("click",()=>{
+      let data = JSON.parse(localStorage.getItem("cartItem"));
+      if(data === null){
+        data = [];
+      }
+      data.push(cartProd);
+      localStorage.setItem("cartItem",JSON.stringify(data));
+      window.location.reload()
+})
+
+}
+

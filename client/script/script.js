@@ -27,8 +27,8 @@
 
       <!-- cart -->
      <div class="cart">
-         <i class="fa-solid fa-cart-shopping"></i>
-         <p>0</p>
+     <a href="../html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a> 
+         <p class="cart-item-total">0</p>
      </div>
   </div>`
  }

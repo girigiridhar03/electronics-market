@@ -29,7 +29,7 @@ const arrowUp = document.querySelector("#arrow-up");
 const arrowDown = document.querySelector("#arrow-down");
 const rightBigImage = document.querySelector(".right-big-image");
 const rightSepcContainer = document.querySelector(".right-sepc-container");
-
+const cart = document.querySelector("#cart");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 
@@ -91,6 +91,7 @@ function getProduct(product){
 
      div.append(h4,ul);
    rightSepcContainer.append(h2,p,div)
+   cartDetails(product)
 
 }
 
@@ -106,3 +107,16 @@ arrowLeft.addEventListener("click",()=>{
     leftScrollImages.scrollLeft -= 320;
     console.log("left")
 })
+
+function cartDetails(cartProd){
+    cart.addEventListener("click",()=>{
+      let data = JSON.parse(localStorage.getItem("cartItem"));
+      if(data === null){
+        data = [];
+      }
+      data.push(cartProd);
+      localStorage.setItem("cartItem",JSON.stringify(data));
+     window.location.reload()
+})
+
+}

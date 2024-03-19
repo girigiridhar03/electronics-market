@@ -130,7 +130,7 @@ leftSix.addEventListener("click",()=>{
     productContainerFive.style.scrollbehavior = "smooth"
      productContainerFive.scrollLeft -= 900
 })
-
+let storedItem = []
 function sectionOne(products){
     
    products.map(prod=>{
@@ -154,18 +154,18 @@ function sectionOne(products){
          productsOne.append(div);
  
          div.addEventListener("click",()=>{
-           
               singleProduct(prod);
          })
     }
    })
 }
 
+
+
 function singleProduct(prod){
      let singleProd = prod._id;
-       localStorage.setItem("mobile",JSON.stringify(singleProd));
+       localStorage.setItem("single",JSON.stringify(singleProd));
        window.location.href = "../html/single-product.html";
-   
 }
 
 function onlyLaptops(prod){
