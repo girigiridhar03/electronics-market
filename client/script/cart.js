@@ -9,7 +9,8 @@ const footerSection = document.querySelector(".footer-section");
 footerSection.innerHTML = footer();
 
 const cartContainer = document.querySelector(".cart-container");
-const cartItems = document.querySelector(".cart-length");
+const cartlen = document.querySelector("#cart-length");
+console.log(cartlen)
 const empty = document.querySelector('.empty');
 const conShop = document.querySelector('.con-shop');
 const paymentPrice = document.querySelector(".payment-price");
@@ -22,7 +23,6 @@ const cartLength = getCart.length;
 const total = getCart.reduce((index,elem)=>{
     return index + Number(elem.price)
 },0)
-
 if(cartLength === 0){
     cartItemTotal.innerHTML = 0;
 }
@@ -31,11 +31,11 @@ else{
 }
 
 if(cartLength <= 1){
-    cartItems.innerHTML = `(${cartLength} item)`
+    cartlen.innerHTML = `(${cartLength} item)`
     paymentPrice.innerHTML = `(${cartLength} item)`
 }
 else{
-    cartItems.innerHTML = `(${cartLength} items)`
+    cartlen.innerHTML = `(${cartLength} items)`
     paymentPrice.innerHTML = `(${cartLength} item)`
 }
 cartTotal.innerHTML = total

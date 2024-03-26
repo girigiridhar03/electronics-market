@@ -50,13 +50,12 @@ getAc();
 
 
 function homeproducts(prod){
-    searchProducts.addEventListener("keyup",()=>{
+    searchProducts.addEventListener("input",()=>{
        let val = searchProducts.value;
        if(val.length > 0){
        searchProductContainer.style.display = "block";
         prod.filter(item=>{
-           
-        if(item.desc.toLowerCase().includes(val.toLowerCase()) || item.brand.toLowerCase().includes(val.toLowerCase())){
+        if(item.desc.toLowerCase().includes(val.toLowerCase())){
            const div = document.createElement("div");
            div.classList.add("search-images")
 
@@ -97,7 +96,7 @@ function mobileproducts(prod){
        searchProductContainer.style.display = "block";
         prod.filter(item=>{
            
-        if(item.desc.toLowerCase().includes(val.toLowerCase()) || item.brand.toLowerCase().includes(val.toLowerCase())){
+        if(item.desc.toLowerCase().includes(val.toLowerCase())){
            const div = document.createElement("div");
            div.classList.add("search-images")
 
@@ -141,7 +140,7 @@ function laptopProducts(prod){
      searchProductContainer.style.display = "block";
       prod.filter(item=>{
          
-      if(item.desc.toLowerCase().includes(val.toLowerCase()) || item.brand.toLowerCase().includes(val.toLowerCase())){
+      if(item.desc.toLowerCase().includes(val.toLowerCase())){
          const div = document.createElement("div");
          div.classList.add("search-images")
 
@@ -187,7 +186,7 @@ function cameraProducts(prod){
      searchProductContainer.style.display = "block";
       prod.filter(item=>{
          
-      if(item.desc.toLowerCase().includes(val.toLowerCase()) || item.brand.toLowerCase().includes(val.toLowerCase())){
+      if(item.desc.toLowerCase().includes(val.toLowerCase())){
          const div = document.createElement("div");
          div.classList.add("search-images")
 
@@ -233,7 +232,7 @@ function acProducts(prod){
      searchProductContainer.style.display = "block";
       prod.filter(item=>{
          
-      if(item.desc.toLowerCase().includes(val.toLowerCase()) || item.brand.toLowerCase().includes(val.toLowerCase())){
+      if(item.desc.toLowerCase().includes(val.toLowerCase())){
          const div = document.createElement("div");
          div.classList.add("search-images")
 
