@@ -1,7 +1,7 @@
 
 const token = JSON.parse(localStorage.getItem("userToken"));
 const getUserNameId = JSON.parse(localStorage.getItem("userName"));
-
+console.log(token)
 
 const newCustomer = document.querySelector(".new-customer");
 const signOut = document.querySelector(".sign-out");
@@ -12,6 +12,11 @@ const signIn = document.querySelector(".signIn");
 if(token){
     newCustomer.style.display = "none";
     signOut.innerHTML = "SIGN OUT"
+    console.log("fuck")
+}
+else{
+    newCustomer.style.display = "display";
+    signOut.innerHTML = "SIGN IN"
 }
 
 
