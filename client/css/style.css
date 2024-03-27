@@ -259,7 +259,7 @@ nav{
     font-size: .9rem;
     margin-bottom: .3rem;
 }
-.my-acc-container div button{
+.my-acc-container div button a{
     padding: .2rem;
     border-radius: 5px;
     color: #ED1C24;

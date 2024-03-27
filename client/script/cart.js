@@ -10,7 +10,7 @@ footerSection.innerHTML = footer();
 
 const cartContainer = document.querySelector(".cart-container");
 const cartlen = document.querySelector("#cart-length");
-console.log(cartlen)
+
 const empty = document.querySelector('.empty');
 const conShop = document.querySelector('.con-shop');
 const paymentPrice = document.querySelector(".payment-price");
@@ -82,7 +82,7 @@ else{
 }
 
 function removeElem(item,index){
-    console.log(getCart.splice(index,1))
+    getCart.splice(index,1)
     localStorage.setItem("cartItem",JSON.stringify(getCart));
     window.location.reload()
 

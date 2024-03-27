@@ -54,22 +54,9 @@
     outline: none;
     padding: 1rem 0;
     position: relative;
+    border-radius: none;
 }
-.login-input-field::after{
-    content: '';
-    width: 100%;
-    height: .15rem;
-    background: red;
-    position: absolute;
-    left: 0;
-    top: 55%;
-    transform: scale(0,1);
-    transform-origin: 0% 100%;
-    transition: transform .3s ease;
-}
-.login-input-field:hover::after{
-    transform: scale(1,1);
-}
+
 
 .login-input-field  span{
     position: absolute;
@@ -105,10 +92,84 @@
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 5px;
     margin-bottom: 1rem;
 }
-
+#password-eye{
+    position: absolute;
+    right: 1rem;
+    top: 28%;
+    transform: translateY(-50%);
+}
+.message-box{
+    color: red;
+    text-align: center;
+    margin: .5rem 0;
+    display: none;
+    font-weight: bold;
+    transform: .2s;
+}
 .footer-section{
-    margin-top: 15rem;
+    margin-top:30rem;
+}
+
+
+@media screen and (max-width:1024px) {
+    .footer-section{
+        margin-top: 46rem;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .login-box{
+        width: 60%;
+    }
+    .login-input-field:hover::after{
+        transform: scale(0,0);
+    }
+
+    .footer-section{
+        margin-top: 49rem;
+    }
+    
+}
+
+
+@media screen and (max-width:600px) {
+    .login-box{
+        width: 70%;
+    }
+    .login-input-field  span{
+        font-size: .9rem;
+    }
+    .login-input-field input{
+        font-size: .9rem;
+    }
+    .login-heading h2{
+        font-size: 1.3rem;
+     
+   }
+
+}
+
+@media screen and (max-width:430px) {
+    .login-box{
+        width: 90%;
+    }
+    .login-input-field  span{
+        font-size: .8rem;
+    }
+    .login-input-field input{
+        font-size: .7rem;
+    }
+    .login-heading h2{
+        font-size: 1.1rem;
+   }
+   .login-heading p{
+    font-size: .6rem;
+   }
+   .sign-up p{
+    font-size: .8rem;
+   }
 }

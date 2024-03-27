@@ -18,10 +18,10 @@
       </div>
       <!-- sign in -->
       <div class="sign-div">
-         <p class="sign-in">Hi,Sign in</p>
+      <a href="../html/login-signup.html"><p class="sign-in">Hi,Sign in</p></a>
          <div class="sign-box">
-             <a href="#"><button>Sign In</button></a>
-             <p>New customer? <a href="#">Sign Up</a> </p>
+             <a href="../html/login-signup.html" class="sign-location"><button class="sign-out">Sign In</button></a>
+             <p class="new-customer">New customer? <a href="../html/login-signup.html">Sign Up</a> </p>
          </div>
      </div>
 
@@ -36,10 +36,10 @@ export const navbarTwo = ()=>{
      return `
      <div class="my-acc-container">
          <div class="welcome-sign">
-             <h4>welcome!</h4>
+             <h4 class="welcome">welcome!</h4>
              <div>
-                 <a href="#"> <button>SIGN IN</button></a>
-                 <a href="#"> <button>SIGN UP</button></a>
+                 <button id="signIn-btn"><a href="../html/login-signup.html" class="signIn">SIGN IN</a></button>
+                 <button id="signUp-btn"><a href="../html/login-signup.html" class="signUp">SIGN UP</a></button>
              </div>
          </div>
          <i class="fa-solid fa-xmark" id="xmark"></i>

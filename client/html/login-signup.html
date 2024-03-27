@@ -11,6 +11,8 @@
     <script type="module" src="../script/home.js" defer></script>
     <script src="../script/search.js" defer></script>
     <script type="module" src="../script/cart2.js" defer></script>
+    <script type="module" src="../script/signOut.js"></script>
+    <script type="module" src="../script/userNameId.js" defer></script>
     <script src="https://kit.fontawesome.com/b9c11e8535.js" defer type="module" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -34,15 +36,18 @@
              
             <div class="login-input-group">
                 <div class="login-input-field">
-                    <input type="text" id="name" required class="input-name">
+                    <input type="text" id="user-name" required class="input-name">
                     <span class="name-span">Enter Your Name</span>
                 </div>
                 <div class="login-input-field">
-                    <input type="email" id="email" required>
+                    <input type="email" id="user-email" required>
                     <span>Enter Your Email</span>
                 </div>
                 <div class="login-input-field">
-                    <input type="password" id="password" required>
+    
+                        <input type="password" id="user-password" required>
+                        <i class="fa-solid fa-eye-slash" id="password-eye"></i>
+                  
                     <span>Enter Your Password</span>
                 </div>
             </div>
@@ -50,6 +55,10 @@
             <div class="input-btn">
                 <button type="submit" class="continue-btn">Continue</button>
             </div>
+
+            <p class="message-box">
+                please fill the required field
+            </p>
         </div>
 
     </div>
