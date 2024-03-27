@@ -88,7 +88,7 @@ getUserDetails();
                     }
                 
                     loginUserDetails(userLoginDetails);
-                    location.reload();
+                   
             }
            }
 
@@ -155,6 +155,7 @@ const loginUserDetails = async(details)=>{
         let token = [];
         token.push(data.token)
         localStorage.setItem("userToken",JSON.stringify(token));
+        location.href = "../html/index.html";
        } 
        else if(res.status == "500"){
         messageBox.style.display = "block";

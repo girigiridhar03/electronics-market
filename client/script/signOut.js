@@ -1,7 +1,7 @@
 
 const token = JSON.parse(localStorage.getItem("userToken"));
 const getUserNameId = JSON.parse(localStorage.getItem("userName"));
-console.log(token)
+
 
 const newCustomer = document.querySelector(".new-customer");
 const signOut = document.querySelector(".sign-out");
@@ -12,7 +12,6 @@ const signIn = document.querySelector(".signIn");
 if(token){
     newCustomer.style.display = "none";
     signOut.innerHTML = "SIGN OUT"
-    console.log("fuck")
 }
 else{
     newCustomer.style.display = "display";
@@ -21,19 +20,23 @@ else{
 
 
 signOut.addEventListener("click",()=>{
-    signLocation.href = "#";
-    token.splice(0);
-    getUserNameId.splice(0);
-    localStorage.setItem("userToke",JSON.stringify(token));
-    localStorage.setItem("userName",JSON.stringify(getUserNameId));
+    if(token){
+        signLocation.href = "#";
+        token.splice(0);
+        getUserNameId.splice(0);
+        localStorage.setItem("userToke",JSON.stringify(token));
+        localStorage.setItem("userName",JSON.stringify(getUserNameId));
+    }
    
 });
 
 signInBtn.addEventListener("click",()=>{
-    signIn.href = "#";
-    token.splice(0);
-    getUserNameId.splice(0);
-    localStorage.setItem("userToke",JSON.stringify(token));
-    localStorage.setItem("userName",JSON.stringify(getUserNameId));
+    if(token){
+        signIn.href = "#";
+        token.splice(0);
+        getUserNameId.splice(0);
+        localStorage.setItem("userToke",JSON.stringify(token));
+        localStorage.setItem("userName",JSON.stringify(getUserNameId));
+    }
 })
 
