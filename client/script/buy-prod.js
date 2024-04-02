@@ -9,15 +9,11 @@ const buyBtn = document.querySelector(".buy-btn");
 
 buyBtn.addEventListener('click',()=>{
    
-    if(signin.innerHTML == "Hi,Sign in"){
-       token.splice(0)
-    }
-    else{
-        if(token){
+        if(token == token[0]){
             window.location.href = "../html/orderPlaced.html";
         }
         else{
-            console.log("please Login")
+            window.location.href = "../html/login-signup.html"
         }
-    }
+    
 })

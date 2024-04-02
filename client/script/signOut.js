@@ -9,7 +9,34 @@ const signLocation = document.querySelector(".sign-location");
 const signInBtn = document.querySelector("#signIn-btn");
 const signIn = document.querySelector(".signIn");
 
-if(token){
+
+signOut.addEventListener("click",()=>{
+    if(token == token[0]){
+        signLocation.href = "#";
+        token.splice(0);
+        getUserNameId.splice(0);
+        localStorage.setItem("userToken",JSON.stringify(token));
+        localStorage.setItem("userName",JSON.stringify(getUserNameId));
+        location.reload();
+    }
+   
+});
+
+signInBtn.addEventListener("click",()=>{
+    if(token == token[0]){
+        signIn.href = "#";
+        token.splice(0);
+        getUserNameId.splice(0);
+        localStorage.setItem("userToken",JSON.stringify(token));
+        localStorage.setItem("userName",JSON.stringify(getUserNameId));
+        location.reload();
+    }
+    else{
+        signIn.href = "../html/login-signup.html";
+    }
+})
+
+if(token == token[0]){
     newCustomer.style.display = "none";
     signOut.innerHTML = "SIGN OUT"
 }
@@ -17,26 +44,4 @@ else{
     newCustomer.style.display = "display";
     signOut.innerHTML = "SIGN IN"
 }
-
-
-signOut.addEventListener("click",()=>{
-    if(token){
-        signLocation.href = "#";
-        token.splice(0);
-        getUserNameId.splice(0);
-        localStorage.setItem("userToke",JSON.stringify(token));
-        localStorage.setItem("userName",JSON.stringify(getUserNameId));
-    }
-   
-});
-
-signInBtn.addEventListener("click",()=>{
-    if(token){
-        signIn.href = "#";
-        token.splice(0);
-        getUserNameId.splice(0);
-        localStorage.setItem("userToke",JSON.stringify(token));
-        localStorage.setItem("userName",JSON.stringify(getUserNameId));
-    }
-})
 
