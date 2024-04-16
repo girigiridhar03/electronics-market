@@ -12,6 +12,7 @@ const signIn = document.querySelector(".signIn");
 
 signOut.addEventListener("click",()=>{
     if(token == token[0]){
+        console.log(token)
         signLocation.href = "#";
         token.splice(0);
         getUserNameId.splice(0);
@@ -43,5 +44,6 @@ if(token == token[0]){
 else{
     newCustomer.style.display = "display";
     signOut.innerHTML = "SIGN IN"
+    
 }
 
