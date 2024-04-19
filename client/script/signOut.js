@@ -36,14 +36,13 @@ signInBtn.addEventListener("click",()=>{
         signIn.href = "../html/login-signup.html";
     }
 })
-
-if(token == token[0]){
+if(token == null){
+    newCustomer.style.display = "display";
+    signOut.innerHTML = "SIGN IN"
+}
+else if(token == token[0]){
     newCustomer.style.display = "none";
     signOut.innerHTML = "SIGN OUT"
 }
-else{
-    newCustomer.style.display = "display";
-    signOut.innerHTML = "SIGN IN"
-    
-}
+
 
