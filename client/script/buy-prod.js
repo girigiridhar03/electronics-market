@@ -15,5 +15,8 @@ buyBtn.addEventListener('click',()=>{
           
             window.location.href = "../html/orderPlaced.html";
         }
+        else{
+            window.location.href = "../html/login-signup.html";
+        }
     
 })

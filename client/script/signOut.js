@@ -44,5 +44,7 @@ else if(token == token[0]){
     newCustomer.style.display = "none";
     signOut.innerHTML = "SIGN OUT"
 }
-
-
+else{
+    newCustomer.style.display = "display";
+    signOut.innerHTML = "SIGN IN"
+}
